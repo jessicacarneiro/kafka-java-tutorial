@@ -27,6 +27,8 @@ public class ProducerDemoKeys {
 
             ProducerRecord<String, String> producerRecord = new ProducerRecord<String, String>(topicName, key, value);
 
+            logger.info("Key: " + key);
+
             producer.send(producerRecord, new Callback() {
                 @Override
                 public void onCompletion(RecordMetadata recordMetadata, Exception e) {
