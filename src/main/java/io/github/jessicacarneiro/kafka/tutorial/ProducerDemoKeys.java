@@ -38,8 +38,7 @@ public class ProducerDemoKeys {
                                 "Partition: " + recordMetadata.partition() + "\n" +
                                 "Offset: " + recordMetadata.offset() + "\n" +
                                 "Timestamp: " + recordMetadata.timestamp());
-                    }
-                    else {
+                    } else {
                         logger.error("Error while producing", e);
                     }
                 }
